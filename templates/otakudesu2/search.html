@@ -1,0 +1,49 @@
+{% extends 'layout2/base.html' %}
+        <script>
+            document.title = 'Otakudesu • Home';
+        </script>
+
+{% block title %}
+	<title>Search • Otakudesu</title>
+{% endblock %}
+
+{% block property %}
+	<meta property="og:title" content="Otakudesu • Search" />
+	<meta property="og:description" content="Pencarian otakudesu" />
+	<meta property="og:url" content="{{ url }}" />
+	<meta property="og:site_name" content="WEEBREAD" />
+	<meta property="og:image" content="/assets/image/otakudesu.png" />
+	<meta property="og:image:secure_url" content="/assets/image/otakudesu.png" />
+	<meta property="og:image:alt" content="otakudesu_image" />
+	<meta property="og:image:type" content="image/png" />
+{% endblock %}
+
+{% block content %}
+	<section>
+		<header class="major">
+			<h2>Hasil Pencarian</h2>
+		</header>
+
+		<div class="posts">
+			{% for anime in animes %}
+				<article>
+					<a href="#" class="image center-cropped"><img src="{{anime.thumb}}" alt="{{ anime.name }}" /></a>
+					<h3>{{ anime.name }}</h3>  
+					<p>Nonton {{ anime.name }}</p>
+
+					<ul class="actions">
+						<li><a class="button" href="/otakudesu/{{ anime.endpoint }}">More</a></li>
+					</ul>
+				</article>
+			{% endfor %}
+		</div>
+	</section>   
+{% endblock %}
+
+{% block search %}
+    <section id="search" class="alt" data-source="otakudesu">
+        <form name="search" action="">
+            <input type="text" name="query" id="query" placeholder="Search" required="">
+        </form>
+    </section>
+{% endblock %}

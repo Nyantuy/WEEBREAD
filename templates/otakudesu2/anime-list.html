@@ -1,0 +1,45 @@
+{% extends 'layout2/base.html' %}
+
+{% block title %}
+    <title>{{ title }} • Otakudesu</title>
+{% endblock %}
+
+{% block property %}
+    <meta property="og:title" content="Otakudesu • Anime List" />
+    <meta property="og:description" content="Anime List otakudesu" />
+    <meta property="og:url" content="{{ url }}" />
+    <meta property="og:site_name" content="WEEBREAD" />
+    <meta property="og:image" content="/assets/image/otakudesu.png" />
+    <meta property="og:image:secure_url" content="/assets/image/otakudesu.png" />
+    <meta property="og:image:alt" content="search_image" />
+    <meta property="og:image:type" content="image/png" />
+{% endblock %}
+
+{% block content %}
+    <section>
+        <header class="major">
+            <h2>{{ title }}</h2>
+        </header>
+
+        <div class="row">
+            {% for par in anime_list %}
+                <div class="col-6 col-12-small">
+                    <ul class="alt">
+                        <h2>{{ par.name }}</h2>
+                        {% for anime in par.animes %}
+                            <li><a href="/otakudesu/{{ anime.endpoint}}" target="_blank">{{ anime.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}
+
+{% block search %}
+    <section id="search" class="alt" data-source="otakudesu">
+        <form name="search" action="">
+            <input type="text" name="query" id="query" placeholder="Search" required="">
+        </form>
+    </section>
+{% endblock %}

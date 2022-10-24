@@ -1,0 +1,151 @@
+html {
+    scroll-behavior: smooth;
+}
+
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+}
+
+#btn-brightness {
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    display: block;
+}
+
+#btn-option {
+    position: fixed;
+    bottom: 120px;
+    right: 20px;
+    display: block;
+}
+
+.page-item.active>.page-link {
+    border-color: grey;
+}
+
+.list-group-item {
+    background-color: #1F1F1F;
+    border-color: darkgrey;
+}
+
+table tbody tr:nth-child(2n + 1) {
+    background-color: #1F1F1F;
+}
+
+.form-range {
+    border: 2px solid darkgrey;
+    border-radius: 5px;
+
+}
+
+.swal2-styled.swal2-confirm {
+    background-color: transparent;
+}
+
+@media screen and (max-width: 768px) {
+    td.button {
+        width: 80%;
+        font-size: 1.2rem;
+    }
+
+    .table-wrapper.modl {
+        width: 450px;
+        overflow: auto;
+    }
+
+    #btn-option {
+        bottom: 110px;
+    }
+
+    #btn-brightness {
+        bottom: 65px;
+    }
+}
+
+.swal2-range input,
+.swal2-range output {
+    height: 0;
+}
+
+.plyr__control {
+    box-shadow: none;
+}
+
+.card {
+    border-color: #414141;
+    background-color: #252525;
+}
+
+.carousel-inner .carousel-item-right.active,
+.carousel-inner .carousel-item-next {
+    transform: translateX(24.5%);
+}
+
+.carousel-inner .carousel-item-left.active,
+.carousel-inner .carousel-item-prev {
+    transform: translateX(-24.5%)
+}
+
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left {
+    transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+    .carousel-inner .carousel-item>div {
+        display: none;
+    }
+
+    .carousel-inner .carousel-item>div:first-child {
+        display: block;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/* display 3 */
+@media (min-width: 768px) {
+
+    .carousel-inner .carousel-item-right.active,
+    .carousel-inner .carousel-item-next {
+        transform: translateX(25%);
+    }
+
+    .carousel-inner .carousel-item-left.active,
+    .carousel-inner .carousel-item-prev {
+        transform: translateX(-25%);
+    }
+}
+
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left {
+    transform: translateX(0);
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf;
+}
