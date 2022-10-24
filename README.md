@@ -5,7 +5,7 @@ Animanga, read and watch
 # Installation
 1. Already have python installed on your pc
 2. run **pip install -r requirements.txt** in terminal
-3. to run it, type **py manage.py runserver** in terminal
+3. to run it, type **Python manage.py runserver** in terminal
 4. enjoy.
 
 
