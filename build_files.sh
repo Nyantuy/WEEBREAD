@@ -1,2 +1,2 @@
 pip install -r requirements.txt
-Python manage.py runserver
+python manage.py runserver
