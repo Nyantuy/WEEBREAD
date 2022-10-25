@@ -1,5 +1,5 @@
 """
-WSGI config for komikato project.
+WSGI config for WEEBREAD project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,7 +11,7 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'komikato.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'WEEBREAD.settings')
 
 application = get_wsgi_application()
 app = application
