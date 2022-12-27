@@ -3,11 +3,10 @@ import json
 import urllib
 from bs4 import BeautifulSoup
 baseURL = "https://h.mangabat.com/"
-altURL = "https://mangabat.com/"
+altURL = "https://h.mangabat.com/"
 
 def index(request):
     response = tools.get(baseURL)
-    
     return { 'success': True, 'statusCode': response.status_code }
 
 def home(request):
